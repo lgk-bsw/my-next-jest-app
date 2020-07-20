@@ -1,0 +1,13 @@
+$btn-bg: rgb(67, 67, 212);
+
+.btn {
+    background-color: $btn-bg;
+    color: white;
+    border: 2px solid $btn-bg;
+    padding: .7rem 1rem;
+    transition: background-color .2s;
+
+    &:hover {
+        background-color: lighten($btn-bg, 5%);
+    }
+}
