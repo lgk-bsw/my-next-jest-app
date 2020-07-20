@@ -13,3 +13,7 @@ test("Adding list item", () => {
     listComponent.find("form").simulate("submit", fakeEvent);
     expect(listComponent.find("ul > li").length).toBe(1);
 });
+
+test("Change list item value", () => {
+
+});

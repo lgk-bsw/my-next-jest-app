@@ -1,4 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from "react";
+import { Btn } from "./Btn";
+import FormControlStyles from "../styles/FormControl.module.scss";
 
 export const List = () => {
     const [items, setItems] = useState<string[]>([]);
@@ -11,6 +13,7 @@ export const List = () => {
                     <li key={key}>
                         <input
                             value={item}
+                            className={FormControlStyles.formControl}
                             onChange={({ target }: ChangeEvent<HTMLInputElement>) => {
                                 let newItems = [...items];
                                 newItems[key] = target.value;
@@ -30,9 +33,10 @@ export const List = () => {
                     setNewItem("");
                 }}
             >
-                <button type="submit">+</button>
+                <Btn type="submit" label="+" />
                 <input
                     type="text"
+                    className={FormControlStyles.formControl}
                     placeholder="Enter something..."
                     value={newItem}
                     onChange={({ target }: ChangeEvent<HTMLInputElement>) => {

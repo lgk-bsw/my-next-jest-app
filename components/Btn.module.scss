@@ -1,4 +1,4 @@
-$btn-bg: rgb(67, 67, 212);
+@import "../styles/variables";
 
 .btn {
     background-color: $btn-bg;
@@ -8,6 +8,6 @@ $btn-bg: rgb(67, 67, 212);
     transition: background-color .2s;
 
     &:hover {
-        background-color: lighten($btn-bg, 5%);
+        background-color: $btn-hover-bg;
     }
 }

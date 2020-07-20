@@ -1,0 +1,13 @@
+@import "./variables";
+
+.formControl {
+    font: inherit;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: .7rem 1rem;
+
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
